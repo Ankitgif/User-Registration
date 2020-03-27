@@ -27,5 +27,13 @@ then
 else
         echo invalid;
 fi
-
+echo "Enter a Phone Number : "
+read phnumber
+pat="^[0-9]{2}[[:space:]][0-9]{10}$"
+if [[ $phnumber =~ $pat ]]
+then
+	echo "Phone Number is valid"
+else
+	echo "Phone Number is not valid"
+fi
 
