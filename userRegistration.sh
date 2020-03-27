@@ -36,4 +36,12 @@ then
 else
 	echo "Phone Number is not valid"
 fi
-
+echo "Enter Password : "
+read password
+pat="^[a-zA-z]{8,}$"
+if [[ $password =~ $pat ]]
+then
+	echo "Password is valid"
+else
+	echo "Password is not valid"
+fi
