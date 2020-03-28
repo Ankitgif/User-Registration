@@ -20,7 +20,7 @@ else
 fi
 echo "Enter email id : "
 read mailid
-pat="^[a-z]{3,}([._+\-][a-z0-9]*)?[@]{1}[a-z]{3,}[.]{1}[a-z]{2,4}(\.[a-z]{2})?$"
+pat="^[a-z]{3,}([._+\-][a-z0-9]*)?[@]{1}[a-z]{2,}[.]{1}[a-z]{2,4}(\.[a-z]{2})?$"
 if [[ $mailid =~ $pat ]]
 then
         echo valid;
@@ -38,7 +38,7 @@ else
 fi
 echo "Enter Password : "
 read password
-pat="^[a-zA-z]{8,}$"
+pat="^((?=.*[A-Z])([a-zA-Z0-9]){8})$"
 if [[ $password =~ $pat ]]
 then
 	echo "Password is valid"
