@@ -39,7 +39,8 @@ fi
 echo "Enter Password : "
 read password
 pat="^((?=.*[A-Z])(?=.*[0-9])([a-zA-Z0-9]){8,})$"
-if [[ $password =~ $pat ]]
+pat8="(?=([\W]$))"
+if [[ $password =~ $pat$pat8 ]]
 then
 	echo "Password is valid"
 else
